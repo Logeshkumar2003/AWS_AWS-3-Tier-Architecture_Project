@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS 3-Tier Architecture Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-animation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <header class="header">
+        <h1>AWS 3-Tier Architecture</h1>
+        <p>Web Server → App Server → Amazon RDS</p>
+    </header>
+
+    <main class="main-container">
+
+        <section class="hero-section">
+
+            <p class="description">
+                This application demonstrates a complete AWS 3-tier architecture
+                where the front-end communicates with the application server,
+                which then retrieves data from Amazon RDS.
+            </p>
+
+        </section>
+
+        <section class="architecture-section">
+
+            <div class="tier-card">
+                <h3>🌐 Web Tier</h3>
+                <p>Public EC2</p>
+            </div>
+
+            <div class="arrow">➜</div>
+
+            <div class="tier-card">
+                <h3>⚙️ App Tier</h3>
+                <p>Private EC2 + Flask</p>
+            </div>
+
+            <div class="arrow">➜</div>
+
+            <div class="tier-card">
+                <h3>🗄️ Database Tier</h3>
+                <p>Amazon RDS</p>
+            </div>
+
+        </section>
+
+        <section class="login-box">
+
+            <h2>Fetch User Data</h2>
+
+            <p>
+                Click the button below to retrieve data from the App Server.
+            </p>
+
+            <button id="loginButton">
+                Get User Details
+            </button>
+
+            <div id="response"></div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
